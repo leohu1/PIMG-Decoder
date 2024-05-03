@@ -24,7 +24,7 @@ def has_transparency(img):
 
 
 def pimg_decode(pimg_path:Path) -> tuple[Path, Path, Path]:
-    psb_decoder_path = Path("C:\\Users\\26071\\Desktop\\FreeMoteToolkit\\PsbDecompile.exe")
+    psb_decoder_path = Path("./FreeMoteToolkit\\PsbDecompile.exe")
     p = " ".join([f"{psb_decoder_path.absolute()}", f'"{pimg_path.absolute()}"'])
     subprocess.run(p, stdout=subprocess.PIPE)
     base_path = Path(pimg_path.absolute())
